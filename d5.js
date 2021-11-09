@@ -1,6 +1,17 @@
-import {Professional} from "./apii.js";
+// import {Professional} from "./apii.js";
 
-
+class Professional 
+{
+    constructor(name, age, genre, isRetired, nationality, profession)
+    {
+        this.name = name;
+        this.age = age;
+        this.genre = genre;
+        this.isRetired = isRetired;
+        this.nationality = nationality;
+        this.profession = profession;
+    }
+}
 
 function postProfesionales()
 {

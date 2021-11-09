@@ -86,6 +86,6 @@ app.delete("/profesionales", function (req, res)
 })
 app.listen(4400);
 
-export { Professional }
+// export { Professional }
 
 
