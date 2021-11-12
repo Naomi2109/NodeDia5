@@ -27,17 +27,20 @@ app.get ("/profesionales", function (req,res)
 {
     let respuesta;
     let id = req.query.id;
+    let profesion = profesionales[id]
 
-        if ((id==null) && (profesionales.length != 0))
-            respuesta = profesionales;
-        else if ((id!=null) && (profesionales.length != 0))
-            respuesta = profesionales[id]
+        if ((id=="") && (profesionales.length != 0))
+        respuesta = profesionales;
+           
+        else if ((id!=null) && (profesion != undefined))
+        respuesta = profesion
+
         else respuesta = {error:true, codigo:200, message: "El profesional no existe"}
-    
-        res.send(respuesta);
+                res.send(respuesta);
 })
 app.post("/profesionales", function (req, res)
 {
+    console.log(req.body)
     let respuesta; 
     let profesional = new Professional (req.body.name, 
                                         req.body.age, 
@@ -56,16 +59,16 @@ app.put("/profesionales", function (req, res)
 {
     let respuesta;
     let id = req.body.id;
-    if ((id!=null) && (profesionales.length != 0))
-    {   profesionales[id].name = req.body.name
+    if (profesionales[id].name = "")
+        {profesionales[id].name = req.body.name
         profesionales[id].age = req.body.age
         profesionales[id].genre = req.body.genre
         profesionales[id].isRetired = req.body.isRetired
         profesionales[id].nationality = req.body.nationality
         profesionales[id].profession = req.body.profession
         
-        respuesta = {error:false, codigo:200, message: "El profesional se ha modificado"}
-    }
+        respuesta = {error:false, codigo:200, message: "El profesional se ha modificado"}}
+    
     else respuesta = {error:true, codigo:200, message: "El profesional no existe"}
 
     res.send(respuesta)
@@ -86,6 +89,6 @@ app.delete("/profesionales", function (req, res)
 })
 app.listen(4400);
 
-// export { Professional }
+// module.exports = {Professional}
 
 

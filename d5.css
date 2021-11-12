@@ -48,13 +48,25 @@ header #index ul li a:hover{
     font-size: 12px;
 }
 .boton {
-    width: 100%;
+    width: 90%;
     background:rgb(109, 90, 109);
     border:none;
     padding: 12px;
-    font-size: white;
     margin: 16px 0;
     font-size: 15px;
+    text-align: center;
 }
-
-
+.boton:active {
+    width: 91%;
+    
+}
+.habi{
+    font-size: medium;
+    color:black;
+    font-family: fantasy;
+}
+#profesional
+{
+    font-size: x-large;
+    color:black;
+}

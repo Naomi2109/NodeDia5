@@ -1,0 +1,41 @@
+.control 
+{
+    width: 40%;
+    background-color: rgb(232, 75, 75);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+.boton 
+{
+    width: 40%;
+    background:rgb(240, 233, 30);
+    border:none;
+    padding: 12px;
+    margin: 16px 0;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h4 
+{
+    font-size:xx-large;
+    color:rgb(54, 54, 176) ;
+    font-family: fantasy;
+}
+#habilidades
+{
+    font-size: large;
+    color:black;
+    font-family: fantasy;
+}
+#imagen
+{
+    width: 20%;
+    height: 20%;
+}

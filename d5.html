@@ -6,25 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="d5.css">
     
-    <script src="./d5.js"></script>
+    <script src="d5.js"></script>
     <title>profesionales</title>
 </head>
 <body>
-    <header>
-        <div id="index">
-            <center> <ul>
-                <li><a href="d5.html">Crear</a></li>
-                <li><a href="mostrar.html">Mostrar</a></li>
-                <li><a href="Actualizar.html">Actualizar</a></li>
-                <li><a href="Eliminar.html">Eliminar</a></li>
-            </ul></center>
-    </div>
-
-    </header>
     <section class="formulario">
        
-        <div>
+        <form >
+        
             <h4>Crear Profesional</h4>
+            <input class="controles" type="text" name="id" id="id" placeholder="ID">
             <input class="controles" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
             <input class="controles" type="text" name="edad" id="edad" placeholder="Ingrese su edad">
             <input class="controles" type="text" name="genero" id="genero" placeholder="Ingrese su genero">
@@ -32,11 +23,29 @@
             <input class="controles" type="text" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad">
             <input class="controles" type="text" name="profesion" id="profesion" placeholder="Profesión">
 
-            <button class="boton" 
-            type= "reset"
-            onclick= "postProfesionales()"> Crear </button>
+
             
-        </div>
+
+            <center ><button class="boton" 
+                    type= "reset"
+                    onclick = "postProfesionales()"> Crear </button>
+            </center>
+            <center><button class="boton" 
+                    type= "submit"
+                    onclick= "getProfesionales(event)"> Mostrar </button>
+            </center>
+            <center><button class="boton" 
+                    type= "submit"
+                    onclick= "putProfesionales()"> Actualizar </button>
+            </center>
+            <center><button class="boton" 
+                    type= "reset"
+                    onclick= "deleteProfesionales()"> Eliminar </button>
+            </center>
+            
+        </form>
+        <div id= "profesional"></div>
+    
 
     </section>
 
