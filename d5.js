@@ -103,14 +103,13 @@ function putProfesionales()
 {
 
     let profesional = new Professional (
+        document.getElementById("id").value, 
         document.getElementById("nombre").value,
         document.getElementById("edad").value,
         document.getElementById("genero").value,
         document.getElementById("retirado").value,
         document.getElementById("nacionalidad").value,
-        document.getElementById("oscars").value,
-        document.getElementById("profesion").value,
-        document.getElementById("id").value )
+        document.getElementById("profesion").value)
     
     const url = "http://localhost:4400/profesionales";
     let param =
@@ -119,10 +118,11 @@ function putProfesionales()
         method: "PUT",
         body: JSON.stringify(profesional)
     }
-    fetch(url,param)
+
+fetch(url,param)
     .then (function(result)
     {
-        return result
+       console.log(result)
     })
     .catch(function(error)
     {

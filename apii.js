@@ -29,7 +29,7 @@ app.get ("/profesionales", function (req,res)
     let id = req.query.id;
     let profesion = profesionales[id]
 
-        if ((id=="") && (profesionales.length != 0))
+        if (((id==null) || (id=="")) && (profesionales.length != 0))
         respuesta = profesionales;
            
         else if ((id!=null) && (profesion != undefined))
@@ -56,16 +56,22 @@ app.post("/profesionales", function (req, res)
 })
 
 app.put("/profesionales", function (req, res)
-{
+{ 
     let respuesta;
     let id = req.body.id;
-    if (profesionales[id].name = "")
-        {profesionales[id].name = req.body.name
-        profesionales[id].age = req.body.age
+
+    if ((id!=null) && (profesionales.length!=0))
+        profesionales[id].name = req.body.name
+    if ((id!=null) && (profesionales.length!=0))
+        profesional[id].age = req.body.age
+    if ((id!=null) && (profesionales.length!=0))
         profesionales[id].genre = req.body.genre
+    if ((id!=null) && (profesionales.length!=0))
         profesionales[id].isRetired = req.body.isRetired
+    if ((id!=null) && (profesionales.length!=0))
         profesionales[id].nationality = req.body.nationality
-        profesionales[id].profession = req.body.profession
+    if ((id!=null) && (profesionales.length!=0))
+        {profesionales[id].profession = req.body.profession
         
         respuesta = {error:false, codigo:200, message: "El profesional se ha modificado"}}
     
