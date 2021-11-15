@@ -5,22 +5,6 @@
 }
 
 
-header #index ul li{
-    display:inline-block;
-    padding: 30px;
-    font-size: 20px;
-   
-}
-header #index ul li a{
-    color:black;
-    text-decoration: thistle;
-
-}
-header #index ul li a:hover{
-    color:rgb(160, 127, 160);
-    text-decoration:underline;
-}
-
 .formulario {
     width: 600px;
     background:thistle;
@@ -60,11 +44,7 @@ header #index ul li a:hover{
     width: 91%;
     
 }
-.habi{
-    font-size: medium;
-    color:black;
-    font-family: fantasy;
-}
+
 #profesional
 {
     font-size: x-large;
